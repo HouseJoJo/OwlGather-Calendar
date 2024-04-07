@@ -1,0 +1,370 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+    <head>
+        <meta charset="utf-8">
+        <title>Calendar Prototype</title>
+        <link rel="stylesheet" href="style.css">
+        <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    </head>
+    <body>
+
+
+        <!-- LEFT SIDE STUFF (various selections that can be made) -->
+        <div class="mainFrame">
+            <div class="leftSide">
+                <div class="OwlGatherTitle">
+                    OWLGather
+                </div>
+                
+                <div class="select-menu">
+
+                    <div class="campusMenu">
+
+                        <div class="btn-select">
+                            <span class="campusSelectBtn">Campus</span>
+                            <span class="arrow-down">
+                                <i class="bx bx-chevron-down"></i>
+                            </span>
+                        </div>
+                     <!--<box-icon name='checkbox-checked'></box-icon>-->
+
+                        <ul class="options">
+                            <li class="option" >
+                                <span class="check-box">
+                                    <i class="bx bx-check"></i>
+                                </span>
+                                <span class= "option-text"> Kennesaw </span>
+                                </li>
+                            <li class="option">
+                                <span class="check-box">
+                                    <i class="bx bx-check"></i>
+                                </span>
+                                <span class= "option-text"> Marietta </span>
+                            </li>
+                            <li class="option">
+                                <span class="check-box">
+                                    <i class="bx bx-check"></i>
+                                </span>
+                                <span class= "option-text"> Other </span>
+                            </li>
+                            
+                        </ul>
+                    </div>
+
+                    <div class="campusMenu">
+                        <div class="btn-select1">
+                            <span class="campusSelectBtn">Branches</span>
+                            <span class="arrow-down" >
+                                <i class="bx bx-chevron-down"></i>
+                            </span>
+                        </div>
+                        
+                        <ul class="options">
+                            <li class="option">
+                                <span class="check-box">
+                                    <i class="bx bx-check"></i>
+                                </span>
+                                <span  class= "option-text" > Department Led </span>
+                            </li>
+                            <li class="option">
+                                <span class="check-box">
+                                    <i class="bx bx-check"></i>
+                                </span>
+                                <span class= "option-text"> Student Led </span>
+                            </li>
+                                            
+                        </ul>
+                    </div>
+
+                    <div class="campusMenu">
+                        <div class="btn-select2">
+                            <span class="campusSelectBtn">Perks</span>
+                            <span class="arrow-down">
+                                <i class="bx bx-chevron-down"></i>
+                            </span>
+                        </div>
+
+                        <ul class="options">
+                            <li class="option">
+                                <span class="check-box">
+                                    <i id= "checkmark" class="bx bx-check"></i>
+                                </span>
+                                <span class= "option-text">Credit </span>
+                            </li>
+                            <li class="option">
+                                <span class="check-box">
+                                    <i class="bx bx-check"></i>
+                                </span>
+                                <span class= "option-text"> Free Food </span>
+                            </li>
+                            <li class="option">
+                                <span class="check-box">
+                                    <i class="bx bx-check"></i>
+                                </span>
+                                <span class= "option-text"> Free Stuff </span>
+                            </li>
+                                            
+                        </ul>
+                    </div>
+
+                </div>
+
+        </div>
+
+
+
+            <!-- RIGHT SIDE STUFF (the actual calendar) -->
+            <div class="rightSide">
+                <div class="calendarMain">
+                    <div class="calendarHeader">
+                        <div class="calendarHeader">
+                            <div class="currentMonth">
+                                MONTH HERE
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- WEEK 1 -->
+                    <div class="calendarWeekRow">
+                        <div class="calendarEntry">
+                            <div class="entryDay">
+                                day
+                            </div>
+                            <div class="event">
+                                EVENT A
+                            </div>
+                        </div>
+
+                        <div class="calendarEntry">
+                            <div class="entryDay">
+                                day
+                            </div>
+                        </div>
+
+                        <div class="calendarEntry">
+                            <div class="entryDay">
+                                day
+                            </div>
+                        </div>
+
+                        <div class="calendarEntry">
+                            <div class="entryDay">
+                                day
+                            </div>
+                        </div>
+
+                        <div class="calendarEntry">
+                            <div class="entryDay">
+                                day
+                            </div>
+                        </div>
+
+                        <div class="calendarEntry">
+                            <div class="entryDay">
+                                day
+                            </div>
+                        </div>
+
+                        <div class="calendarEntry">
+                            <div class="entryDay">
+                                day
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- WEEK 2 -->
+                    <div class="calendarWeekRow">
+                        <div class="calendarEntry">
+                            <div class="entryDay">
+                                day
+                            </div>
+                        </div>
+
+                        <div class="calendarEntry">
+                            <div class="entryDay">
+                                day
+                            </div>
+                        </div>
+
+                        <div class="calendarEntry">
+                            <div class="entryDay">
+                                day
+                            </div>
+                        </div>
+
+                        <div class="calendarEntry">
+                            <div class="entryDay">
+                                day
+                            </div>
+                        </div>
+
+                        <div class="calendarEntry">
+                            <div class="entryDay">
+                                day
+                            </div>
+
+                            <div class="event">
+                                EVENT B
+                            </div>
+                        </div>
+
+                        <div class="calendarEntry">
+                            <div class="entryDay">
+                                day
+                            </div>
+                        </div>
+
+                        <div class="calendarEntry">
+                            <div class="entryDay">
+                                day
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- WEEK 3 -->
+                    <div class="calendarWeekRow">
+                        <div class="calendarEntry">
+                            <div class="entryDay">
+                                day
+                            </div>
+                        </div>
+
+                        <div class="calendarEntry">
+                            <div class="entryDay">
+                                day
+                            </div>
+                        </div>
+
+                        <div class="calendarEntry">
+                            <div class="entryDay">
+                                day
+                            </div>
+                        </div>
+
+                        <div class="calendarEntry">
+                            <div class="entryDay">
+                                day
+                            </div>
+
+                            <div class="event">
+                                EVENT C
+                            </div>
+                        </div>
+
+                        <div class="calendarEntry">
+                            <div class="entryDay">
+                                day
+                            </div>
+                        </div>
+
+                        <div class="calendarEntry">
+                            <div class="entryDay">
+                                day
+                            </div>
+                        </div>
+
+                        <div class="calendarEntry">
+                            <div class="entryDay">
+                                day
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <!-- WEEK 4 -->
+                    <div class="calendarWeekRow">
+                        <div class="calendarEntry">
+                            <div class="entryDay">
+                                day
+                            </div>
+                        </div>
+
+                        <div class="calendarEntry">
+                            <div class="entryDay">
+                                day
+                            </div>
+                        </div>
+
+                        <div class="calendarEntry">
+                            <div class="entryDay">
+                                day
+                            </div>
+                        </div>
+
+                        <div class="calendarEntry">
+                            <div class="entryDay">
+                                day
+                            </div>
+                        </div>
+
+                        <div class="calendarEntry">
+                            <div class="entryDay">
+                                day
+                            </div>
+                        </div>
+
+                        <div class="calendarEntry">
+                            <div class="entryDay">
+                                day
+                            </div>
+                        </div>
+
+                        <div class="calendarEntry">
+                            <div class="entryDay">
+                                day
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <!-- WEEK 5 -->
+                    <div class="calendarWeekRow">
+                        <div class="calendarEntry">
+                            <div class="entryDay">
+                                day
+                            </div>
+                        </div>
+
+                        <div class="calendarEntry">
+                            <div class="entryDay">
+                                day
+                            </div>
+                        </div>
+
+                        <div class="calendarEntry">
+                            <div class="entryDay">
+                                day
+                            </div>
+                        </div>
+
+                        <div class="calendarEntry">
+                            <div class="entryDay">
+                                day
+                            </div>
+                        </div>
+
+                        <div class="calendarEntry">
+                            <div class="entryDay">
+                                day
+                            </div>
+                        </div>
+
+                        <div class="calendarEntry">
+                            <div class="entryDay">
+                                day
+                            </div>
+                        </div>
+
+                        <div class="calendarEntry">
+                            <div class="entryDay">
+                                day
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <script src="script.js"></script>
+    </body>
+</html>
