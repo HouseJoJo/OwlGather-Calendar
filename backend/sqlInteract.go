@@ -7,9 +7,9 @@ import (
 	_ "github.com/mattn/go-sqlite3"
 )
 
-func main() {
+func test() {
 
-	dbPath := "owl_gather.db"
+	dbPath := "./backend/owl_gather.db"
 	db, err := sql.Open("sqlite3", dbPath)
 	if err != nil {
 		panic(err)
@@ -24,10 +24,18 @@ func main() {
 	}
 	defer tables.Close()
 
+	tableColumns, err := tables.Columns()
+	if err != nil {
+		panic(err)
+	}
+	for i, col := range tableColumns {
+		fmt.Println(i, col)
+	}
+
 	for tables.Next() {
 		fmt.Printf("Entered .next")
 		var tableName string
-		err := tables.Scan(&tableName)
+		err := tables.Scan(&tableName) //causes error. expected 5 args not 1?
 		if err != nil {
 			panic(err)
 		}
