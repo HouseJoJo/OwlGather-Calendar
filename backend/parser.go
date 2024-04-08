@@ -8,7 +8,16 @@ import (
 	"github.com/mmcdole/gofeed"
 )
 
-func main() {
+type Event struct {
+	StartDate  string
+	EventTitle string
+	EventID    int
+	Categories []string
+}
+
+var Events []Event
+
+func ParseRSS() {
 	fp := gofeed.NewParser()
 
 	feed, err := fp.ParseURL("https://owllife.kennesaw.edu/events.rss")
@@ -22,29 +31,33 @@ func main() {
 		return
 	}
 
-	//fmt.Println(feed.String())
+	fmt.Println(feed.String())
 	var mar, ken, other, online int = 0, 0, 0, 0
 
 	for _, item := range feed.Items {
-		fmt.Println("-------------------------")
-		fmt.Println("\nTitle: ", item.Title)
+		//fmt.Println("-------------------------")
+		currTitle := item.Title
+		//fmt.Println("\nTitle: ", item.Title)
 
-		fmt.Println("\nLink: ", item.Link)
+		//fmt.Println("\nLink: ", item.Link)
 		/*	fmt.Println("\nAuthor ", item.Author)
 			fmt.Println("\nImage ", item.Image)*/
-		for index, category := range item.Categories {
-			fmt.Printf("Categ. %d: %s\n", index+1, category)
+		var currCategories []string
+		for _, category := range item.Categories {
+			//fmt.Printf("Categ. %d: %s\n", index+1, category)
+			currCategories = append(currCategories, category)
 		}
 		//fmt.Println("\nCategories", item.Categories)
-		fmt.Println("\nLocation: ", item.Custom["location"])
+		//fmt.Println("\nLocation: ", item.Custom["location"])
 
-		//fmt.Println("\nDesc. ", item.Description)
-		fmt.Println("\nDesc: ", parseDesc(item.Description))
-		fmt.Println("\nDateTime: ", parseDate(item.Description))
+		fmt.Println("\nDesc. ", item.Description)
+		//fmt.Println("\nDesc: ", parseDesc(item.Description))
+		//fmt.Println("\nDateTime: ", parseDate(item.Description))
+		currDateTime := parseDate(item.Description)
 		//fmt.Println("\nLocation. ", parseStrings(item.Custom, `location:`, `start`))
-
+		Events = append(Events, Event{currDateTime, currTitle, -1, currCategories})
 		//fmt.Println("Desc:", item.Description)
-		campus := ("\nModality: " + modality(item.Categories, item.Custom["location"]))
+		//campus := ("\nModality: " + modality(item.Categories, item.Custom["location"]))
 		if modality(item.Categories, item.Custom["location"]) == `Kennesaw` {
 			ken++
 		}
@@ -58,7 +71,7 @@ func main() {
 			other++
 		}
 
-		fmt.Println(campus)
+		//fmt.Println(campus)
 
 	}
 
