@@ -83,7 +83,6 @@ body, html {
     flex: 1;
     text-align: end;
     margin: 5px;
-    margin-color: black;
     background-color: #e8e6e6;
     display: flex;
     flex-direction: column;
@@ -99,7 +98,6 @@ body, html {
     flex: 1;
     text-align: center;
     margin: 5px;
-    margin-color: transparent;
     border-radius: 16px;
 
 }
@@ -262,4 +260,15 @@ body, html {
 .option.checked .bx-check{
     transform: scale(1);
     transition: all 0.2s ease-in-out;
+}
+
+.calendarWeekDayNames{
+    color:#f2f3f5;
+    display: flex;
+    margin: 0px 9px;
+}
+
+.calendarWeekDayNames p{
+    padding: 0px 35px;
+    text-align: left;
 }

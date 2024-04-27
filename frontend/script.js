@@ -1,6 +1,18 @@
 const btn = document.querySelector(".btn-select");
 const items = document.querySelectorAll(".option");
 
+const today = new Date();
+const month = today.getMonth();
+
+function getMonthName() {
+  const monthNames = ["January", "February", "March", "April", "May", "June",
+                      "July", "August", "September", "October", "November", "December"];
+  return monthNames[month];
+}
+
+//Initialize current month
+document.querySelector(`.currentMonth`).innerHTML = getMonthName()
+
 btn.addEventListener("click", ()=>{
   btn.classList.toggle("open");
 });
