@@ -1,7 +1,7 @@
 const btn = document.querySelector(".btn-select");
 const items = document.querySelectorAll(".option");
 
-const date = new Date();
+const date = new Date(2024, 4, 1);
 const month = date.getMonth();
 
 function getMonthName() {
@@ -11,7 +11,7 @@ function getMonthName() {
 }
 
 function populateMonth(){ //function to fill day numbers on calendar of current month.
-  var date2 = new Date();
+  var date2 = new Date(2024, 4, 1);
   var firstDay = new Date(date2.getFullYear(), date2.getMonth(), 1); //returns Date type of first day of month
   
   var weekNum = 1;

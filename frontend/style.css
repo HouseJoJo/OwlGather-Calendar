@@ -91,6 +91,16 @@ body, html {
 
 .entryDay {
     flex: 2;
+    font-size: x-large;
+}
+
+.arrow {
+    background-color: orange;
+    width: 8%;
+    height: 40%;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
 }
 
 .event {
@@ -99,6 +109,7 @@ body, html {
     text-align: center;
     margin: 5px;
     border-radius: 16px;
+    font-size: xx-large;
 
 }
 
